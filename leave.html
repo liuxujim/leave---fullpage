@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Xujin Liu's leave of IBM</title>
+	<meta name="author" content="Xujin Liu" />
+	<meta name="description" content="fullPage fixed header and footer." />
+	<!--link rel="stylesheet" type="text/css" href="examples.css" /-->
+	<link rel="stylesheet" type="text/css" href="./css/jquery.fullPage.css" />
+	<style>
+	/* Style for our header texts
+	* --------------------------------------- */
+	h1{
+		font-size: 5em;
+		font-family: arial,helvetica;
+		color: #fff;
+		margin:0;
+		padding:0;
+	}
+
+	/* Centered texts in each section
+	* --------------------------------------- */
+	.section{
+		text-align:center;
+	}
+
+	/* Fixed header and footer.
+	* --------------------------------------- */
+	#header, #footer{
+		position:fixed;
+		height: 50px;
+		display:block;
+		width: 100%;
+		background: #333;
+		z-index:9;
+		text-align:center;
+		color: #f2f2f2;
+		padding: 20px 0 0 0;
+	}
+
+	#header{
+		top:0px;
+	}
+	#footer{
+		bottom:0px;
+	}
+	
+	.container{
+		color: #fff;
+		text-align: left;
+		display: inline-block;
+		vertical-align: middle;
+		line-height: normal; 
+		width: 45%;
+		float:left;
+		height: 200px;
+		padding-left:60px;
+		padding-right:20px;
+	}
+	.leftContainer{
+		border-right:#fff 2px solid;
+	}
+	.rightContainer{
+		
+	}
+	.containerHeader{
+		text-align: center;
+	}
+	.containerText{
+		text-align: left;
+	}
+	.intro{
+		padding-top:100px;
+		padding-bottom:100px;
+		padding-left:120px;
+	}
+	.intro div{
+		display:inline:block;
+		margin-top:-5px;
+	}
+	
+	#img0,#img1,#img2,#img3,#img4,#img5,#img6,#img7{
+		margin-left:2000px;
+	}
+	
+	</style>
+
+	<!--[if IE]>
+		<script type="text/javascript">
+			 var console = { log: function() {} };
+		</script>
+	<![endif]-->
+
+
+</head>
+<body>
+
+<div id="header"></div>
+<div id="footer"></div>
+<!--ul id="menu">
+    <li data-menuanchor="firstPage" class="active"><a href="#firstPage">My Leave</a></li>
+    <li data-menuanchor="secondPage"><a href="#secondPage">Thanks Everyone</a></li>
+    <li data-menuanchor="3rdPage"><a href="#3rdPage">Thanks Simon</a></li>
+	<li data-menuanchor="4thPage"><a href="#4thPage">My IBM Journey</a></li>
+</ul-->
+<div id="fullpage">
+	<div class="section " id="section0">
+		<div class="intro">
+			<img src="./imgs/xujin.jpg"/>
+			<h1>" Bye bye! "</h1>
+			<p>It's hard to say... but, I am going to leave IBM for a while.</p>
+			<p>You can contact me via: 
+				<li>Email:liuxujin@gmail.com</li>
+				<li>Linkedin:liuxujin@gmail.com</li>
+			</p>
+		</div>
+	</div>
+
+	<div class="section" id="section1">
+		<div class="wrap">
+			<div class="container leftContainer containerHeader">
+				<h2>Thanks, IBM. Thanks, Everyone</h2>
+			</div>
+			
+			<div class="container rightContainer containerText">
+				Since I joined the IBM, I met many awesome people. It's only on this day of separation, I just realise how much of the blue blood is in me and how fortunate and proud I have been to be associated with this organization and great colleagues like you. It's your support and encouragement that has always made the difference and made me the person I am today. I'll follow my passion for bleeding edge technology while remaining loyal to the IBM. This isn't goodbye, our paths will hopefully cross again. I wish I can come back in the near future.
+			</div>
+		</div>
+
+	</div>	
+
+	
+	<div class="section" id="section2">
+			
+		<div class="wrap">
+			<div class="container leftContainer containerText">
+				<br>The best manager I have meet ever. Simon gave me many help in my daily work as well as my daily life. I still rember when I came Australia, he drived me to visit the whole Melbourne. I am afraid I will never have a good boss like him later.<br>
+			</div>			
+			<div class="container rightContainer containerHeader">
+			    <h2>Special thanks to my nice boss, Simon Fridrickson</h2>
+				<img src="./imgs/simon.jpg"/>
+			</div>
+		</div>
+	</div>	
+	
+	<div class="section" id="section3">
+	   <div class="intro">
+			
+			<div id="img1"><img src="./imgs/journey1.jpg"/></div>
+			<div id="img2"><img src="./imgs/journey2.jpg"/></div>
+			<div id="img3"><img src="./imgs/journey3.jpg"/></div>
+			<div id="img4"><img src="./imgs/journey4.jpg"/></div>
+			<div id="img5"><img src="./imgs/journey5.jpg"/></div>
+			<div id="img6"><img src="./imgs/journey6.jpg"/></div>
+			<div id="img7"><img src="./imgs/journey7.jpg"/></div>
+		</div>
+	</div>
+
+</div>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script type="text/javascript" src="./js/scrolloverflow.min.js"></script>
+	<script type="text/javascript" src="./js/jquery.fullPage.min.js"></script>
+	<script type="text/javascript" src="./js/build.js"></script>
+	<script type="text/javascript" src="./js/move.min.js"></script>
+
+	<script type="text/javascript">
+		var move = require('move');
+
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				//menu: '#menu',
+				anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage'],
+				sectionsColor: ['#1BBC9B', '#C63D0F', '#7E8F7C', '#AE8F7C'],
+				css3: true,
+				navigation: true,
+				navigationPosition: 'right',
+				navigationTooltips: ['Leave', 'Thanks Everyone', 'Thanks Simon', 'My IBM Journey'],
+				scrollOverflow: true,
+				scrollOverflowOptions: {
+					scrollbars: true,
+			        mouseWheel: true,
+			        hideScrollbars: false,
+			        fadeScrollbars: false,
+			        disableMouse: true
+				},
+				afterLoad: function(anchorLink, index){
+					//section 4
+					if(index == 4){
+						document.getElementById('header').innerHTML = "<b>My IBM Journey</b>";
+						
+							move('#img1').set('margin-left', 0).delay('1s').rotate(360).end(function(){
+								move('#img2').set('margin-left', 0).delay('1s').rotate(360).end(function(){
+									move('#img3').set('margin-left', 0).delay('1s').rotate(360).end(function(){
+										move('#img4').set('margin-left', 0).delay('1s').rotate(360).end(function(){
+											move('#img5').set('margin-left', 0).delay('1s').rotate(360).end(function(){
+												move('#img6').set('margin-left', 0).delay('1s').rotate(360).end(function(){
+													move('#img7').set('margin-left', 0).delay('1s').rotate(360).end();
+												})
+											})
+										})
+									})
+								})
+							})
+					
+					}
+				},				
+				onLeave : function(index, nextIndex,direction){
+					//section 4
+					if(index == 4){
+						document.getElementById('header').innerHTML = "";
+						
+							move('#img1').set('margin-left', 2000).end(function(){							
+								move('#img2').set('margin-left', 2000).end(function(){
+									move('#img3').set('margin-left', 2000).end(function(){
+										move('#img4').set('margin-left', 2000).end(function(){
+											move('#img5').set('margin-left', 2000).end(function(){
+												move('#img6').set('margin-left', 2000).end(function(){
+													move('#img7').set('margin-left', 2000).end();
+												})
+											})
+										})
+									})
+								})
+							})
+						
+					}
+				}
+				
+			})
+		});	
+	</script>
+</body>
+</html>
